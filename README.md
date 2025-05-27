@@ -41,8 +41,8 @@ By using DUNE, you can achieve strong performance on a range of 2D and 3D downst
 
 | Architecture           | Resolution | Checkpoint                                                                                                      | Sem.Seg. ADE20K | Sem.Seg. CityScapes | Sem.Seg. NYU | Sem.Seg. Scannet | Depth NYUd | BEDLAM (PA-PVE) | MapFree (AUC) |
 |------------------------|------------|------------------------------------------------------------------------------------------------------------------|------------------|----------------------|----------------|-------------------|-------------|----------------|----------------|
-| ViT-Base/14 (420MB)   | 336        | [dune_vitbase14_336.pth](https://download.europe.naverlabs.com/dune/dune_vitbase14_336.pth)                    | 45.0             | 69.3                 | 66.9           | 64.6              | 0.384       | 64.3                    | _WIP_
-| ViT-Base/14           | 448        | [dune_vitbase14_448.pth](https://download.europe.naverlabs.com/dune/dune_vitbase14_448.pth)                    | **46.2**             | **71.3**                 | **68.3**          | **65.4**              | 0.365       | 60.1           | _WIP_
+| ViT-Base/14 (420MB)   | 336        | [dune_vitbase14_336.pth](https://download.europe.naverlabs.com/dune/dune_vitbase14_336.pth)                    | 45.0             | 69.3                 | 66.9           | 64.6              | 0.384       | 64.3                    | 94.1
+| ViT-Base/14           | 448        | [dune_vitbase14_448.pth](https://download.europe.naverlabs.com/dune/dune_vitbase14_448.pth)                    | **46.2**             | **71.3**                 | **68.3**          | **65.4**              | 0.365       | 60.1           | 94.2
 | ViT-Base/14*           | 448        | [dune_vitbase14_448_paper.pth](https://download.europe.naverlabs.com/dune/dune_vitbase14_448_paper.pth)        | 45.6             | 70.6                 | 68.2           | 65.2              | **0.358**       | **56.0**        | **94.7**           |
 * *Model reported in the paper and trained using an earlier (internal) version of this codebase.
 
