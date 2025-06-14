@@ -54,12 +54,19 @@ By using DUNE, you can achieve strong performance on a range of 2D and 3D downst
 - WIP: Work in progress.
 - Semantic segmentation results in the table (Sem.Seg.) are obtained after DINOv2 projectors, following the convention in the paper.
 
-After download a pre-trained model, you can easily load it via:
+To load a pretrained model, you can either clone this repository and download a pre-trained model:
 ```Python
 from model.dune import load_dune_from_checkpoint
 model = load_dune_from_checkpoint("./dune_vitbase14_448_paper.pth")
 ```
 
+or use `torch.hub` directly (see [hubconf.py](hubconf.py) for all available models):
+```Python
+# full model with projectors and teacher norms
+model = torch.hub.load("naver/dune", "dune_vitbase_14_448_paper")
+# just the ViT encoder part of the model
+model = torch.hub.load("naver/dune", "dune_vitbase_14_448_paper_encoder")
+```
 
 # Installation
 
@@ -104,7 +111,7 @@ If downloading the 19 datasets is too cumbersome, it is also possible to train D
 To do that, set the `IN1K_DIRS` variable in [data/paths.py](data/paths.py) to the path of your ImageNet-1K.
 
 
-### Table of datasets 
+### Table of datasets
 
 | Name              | Size       | Nature     |
 |-------------------|------------|------------|
