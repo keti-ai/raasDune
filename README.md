@@ -48,7 +48,7 @@ By using DUNE, you can achieve strong performance on a range of 2D and 3D downst
 
 | Architecture           | Resolution | Checkpoint                                                                                                      | Sem.Seg. ADE20K | Sem.Seg. CityScapes | Sem.Seg. NYU | Sem.Seg. Scannet | Depth NYUd | BEDLAM (PA-PVE) | MapFree (AUC) |
 |------------------------|------------|------------------------------------------------------------------------------------------------------------------|------------------|----------------------|----------------|-------------------|-------------|----------------|----------------|
-| ViT-Small/14 (110MB)  | 336        | [dune_vitsmall14_336.pth](https://download.europe.naverlabs.com/dune/dune_vitsmall14_336.pth)                  | 39.6             | 61.7                 | 63.5           | 60.1              | 0.424       | _WIP_              | _WIP_               |
+| ViT-Small/14 (110MB)  | 336        | [dune_vitsmall14_336.pth](https://download.europe.naverlabs.com/dune/dune_vitsmall14_336.pth)                  | 39.6             | 61.7                 | 63.5           | 60.1              | 0.424       | 74.7              | _WIP_               |
 | ViT-Small/14          | 448        | [dune_vitsmall14_448.pth](https://download.europe.naverlabs.com/dune/dune_vitsmall14_448.pth)                  | 41.4             | 63.7                 | 65.5           | 61.2              | 0.404       | 69.0              | 94.5                |
 
 - WIP: Work in progress.
