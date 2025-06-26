@@ -14,14 +14,16 @@ NAVER LABS Europe
 <!-- omit in toc -->
 # Easy navigation
 
-- [Model overview](#summary)
+- [Summary](#summary)
 - [Pre-trained models](#pre-trained-models)
 - [Installation](#installation)
   - [Conda environment](#conda-environment)
   - [Teacher models](#teacher-models)
   - [Distillation datasets](#distillation-datasets)
+    - [Table of datasets](#table-of-datasets)
 - [Training models](#training-models)
 - [Evaluating models](#evaluating-models)
+  - [Fine-tuned MASt3R decoders](#fine-tuned-mast3r-decoders)
 - [PCA visualization](#pca-visualization)
 - [Citation](#citation)
 
@@ -31,9 +33,6 @@ DUNE is a vision encoder trained via multi-teacher distillation. Specifically, D
 
 By using DUNE, you can achieve strong performance on a range of 2D and 3D downstream tasks, like monocular depth, semantic segmentation, multi-view depth estimation, multi-human mesh recovery, multi-view pose regression and 3D reconstruction. Notably, MASt3R model with a DUNE encoder achieves [a new state-of-the art performance in Map-free Visual Relocalization](https://research.nianticlabs.com/mapfree-reloc-benchmark/leaderboard?t=single&f=all), improving over the original MASt3R with a much smaller encoder.
 
-
-
-## Model overview
 
 ![DUNE model overview](./assets/dune.png)
 
@@ -163,8 +162,17 @@ bash ./scripts/train.sh ${output_dir_finetune} \
 We do not provide evaluation scripts for the downstream tasks.
 We kindly ask you to refer to the original repositories of the downstream tasks for evaluation:
 - https://github.com/facebookresearch/dinov2
-- https://github.com/naver/mast3r
+- https://github.com/naver/mast3r (see below for the fine-tuned MASt3R decoders)
 - https://github.com/naver/multi-hmr
+
+## Fine-tuned MASt3R decoders
+
+We provide the fine-tuned MASt3R decoders for the DUNE encoders with resolution 448:
+
+- [DUNE-MASt3R ViT-Base](https://download.europe.naverlabs.com/dune/dunemast3r_cvpr25_vitbase.pth)
+- [DUNE-MASt3R ViT-Small](https://download.europe.naverlabs.com/dune/dunemast3r_cvpr25_vitsmall.pth)
+
+Please see [the relevant section in the MASt3R repository](https://github.com/naver/mast3r?tab=readme-ov-file#usage-dunemast3r) for using these decoders in MASt3R evaluations.
 
 # PCA visualization
 
